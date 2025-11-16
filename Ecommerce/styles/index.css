@@ -1,9 +1,51 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+/**Globales**/
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+/* Header y navegacio */
+
+.nombre-sitio{
+    margin: 50px;
+    text-align: center;
+}
+
 .nombre-sitio span{
     color: #037bc0;
 }
 
-.sobre-nosotros{
-    background-color: red;
-    width: 200px;
-    padding: 25px;
+.nav-principal {
+    padding: 20px 0;
+    display: flex;
+    justify-content: first baseline;
+
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor-navegacion {
+    border-top: 1px solid #e1e1e1;
 }
