@@ -1,12 +1,45 @@
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
+
 }
+
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+
+}
+
 /**Globales**/
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 3rem;
+    font-weight: 900;
+}
 
 a{
     text-decoration: none;
@@ -14,7 +47,7 @@ a{
 }
 
 .contenedor {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -24,10 +57,30 @@ img {
 }
 
 
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+
+.btn:hover{
+    background-color: #769c02;
+}
+
+/* utilidades */
+.text-center {
+    text-align: center;
+}
+
+
 /* Header y navegacio */
 
 .nombre-sitio{
-    margin: 50px;
+    margin-top: 5rem;
     text-align: center;
 }
 
@@ -36,7 +89,7 @@ img {
 }
 
 .nav-principal {
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
 
@@ -44,9 +97,10 @@ img {
 
 .hero {
     background-image: url(../img/principal.jpg);
-    height: 550px;
+    height: 55rem;
     background-repeat: no-repeat;
     background-size: cover; 
+    background-position: center center;
 }
 
 .contenedor-navegacion {
@@ -54,25 +108,150 @@ img {
 }
 
 /* Categorias */
+.categorias {
+    padding-top: 5rem;
+}
+
 .listado-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.categorias h2{
-    text-align: center;
-}
 
 .categoria a {
     display: block;
     text-align: center;
-    padding: 20px;
-    font-size: 20px;
+    padding: 2rem;
+    font-size: 2rem;
 }
 
 .categoria a:hover {
     background-color: #037bc0;
     color: #fff;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Bloque nosotros */
+
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 110rem;
+    margin: 3rem 0;
+}
+
+.sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+}
+
+.texto-nosotros {
+    grid-column: 2 / 3;
+    color: #fff;
+}
+
+/* listado de productos */
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0 0 0.5rem 0;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+
+}
+
+.producto:nth-child(1) {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2) {
+    grid-column: 1 / 4;
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3) {
+    grid-column: 4/7;
+}
+
+.producto:nth-child(4) {
+    grid-column: 1/3;
+}
+
+.producto:nth-child(5) {
+    grid-column: 3/5;
+}
+
+.producto:nth-child(6) {
+    grid-column: 5/7;
+}
+
+/* pie de pagina */
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 3rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.site-footer h3 {
+    margin-bottom: 0.5rem;
 }
