@@ -233,6 +233,8 @@ img {
 .site-footer {
     border-top: 1px solid #e1e1e1;
     padding-top: 3rem;
+    margin-top: 3rem;
+    
 }
 
 .footer-grid {
@@ -254,4 +256,24 @@ img {
 
 .site-footer h3 {
     margin-bottom: 0.5rem;
+}
+
+/* Pagina nosotros */
+
+.Nosotrosh2{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.contenido-nosotros{
+    display: grid;
+    column-gap: 4rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr));
+}
+
+.Nosotros-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
